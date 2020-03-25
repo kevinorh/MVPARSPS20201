@@ -1,30 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GKf-Tf-7cw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--WelcomeViewController-->
+        <scene sceneID="BaK-8d-a8K">
+            <objects>
+                <viewController title="WelcomeViewController" id="GKf-Tf-7cw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2iy-UW-8D0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="LaunchScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="A3U-cT-3kU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0v-wc-oAG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="818" id="beG-DZ-yam"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Bienvenido a WoW!">
+                                    <color key="titleColor" red="0.96177757370000005" green="1" blue="0.99411960659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="avc-fQ-A2a"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toque para iniciar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-Ps-CBI">
+                                <rect key="frame" x="135" y="501" width="144.5" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.96177757370000005" green="1" blue="0.99411960659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="A3U-cT-3kU" secondAttribute="bottom" id="00K-33-5NU"/>
+                            <constraint firstItem="b0v-wc-oAG" firstAttribute="leading" secondItem="cpk-Ls-DFH" secondAttribute="leading" id="5ZS-Fr-ypj"/>
+                            <constraint firstAttribute="trailing" secondItem="A3U-cT-3kU" secondAttribute="trailing" id="7Qo-Fn-n1T"/>
+                            <constraint firstItem="b0v-wc-oAG" firstAttribute="top" secondItem="cpk-Ls-DFH" secondAttribute="top" id="ChL-h2-Krv"/>
+                            <constraint firstItem="b0v-wc-oAG" firstAttribute="bottom" secondItem="cpk-Ls-DFH" secondAttribute="bottom" id="RkR-OO-Dca"/>
+                            <constraint firstItem="hdc-Ps-CBI" firstAttribute="centerX" secondItem="2iy-UW-8D0" secondAttribute="centerX" id="Yio-nB-Hh6"/>
+                            <constraint firstItem="b0v-wc-oAG" firstAttribute="trailing" secondItem="cpk-Ls-DFH" secondAttribute="trailing" id="aQh-UF-RRv"/>
+                            <constraint firstItem="A3U-cT-3kU" firstAttribute="leading" secondItem="2iy-UW-8D0" secondAttribute="leading" id="dFx-FZ-UkO"/>
+                            <constraint firstItem="cpk-Ls-DFH" firstAttribute="bottom" secondItem="hdc-Ps-CBI" secondAttribute="bottom" constant="340" id="s3H-5D-WHx"/>
+                            <constraint firstItem="A3U-cT-3kU" firstAttribute="top" secondItem="2iy-UW-8D0" secondAttribute="top" id="tmn-J2-XuU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cpk-Ls-DFH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zki-Bh-gu7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962.31884057971024" y="51.5625"/>
+        </scene>
         <!--ARView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="BodyDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="ARView" customClass="ARView" customModule="RealityKit">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOb-r7-ma0">
+                                <rect key="frame" x="20" y="752" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCC-XZ-E8d">
+                                <rect key="frame" x="215" y="752" width="161" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-ZP-wTi">
+                                <rect key="frame" x="186" y="385" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6hj-Nx-pWd"/>
                     <connections>
+                        <outlet property="LeftHandLabel" destination="mOb-r7-ma0" id="tHK-rL-5i3"/>
+                        <outlet property="MessagesLabel" destination="rqb-ZP-wTi" id="elR-Du-t6r"/>
+                        <outlet property="RigthHandLabel" destination="MCC-XZ-E8d" id="fbp-Pv-um6"/>
                         <outlet property="arView" destination="8bC-Xf-vdC" id="hvU-Ek-za3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
+            <point key="canvasLocation" x="1060.8695652173915" y="59.598214285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchScreenBackground" width="676" height="1366"/>
+    </resources>
 </document>
